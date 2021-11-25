@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./Navbar.css";
 import { BsTwitter } from "react-icons/bs";
-import { Link } from "react-scroll";
 import Logo from "../../assets/logo.jpg";
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "../wallet/Connectors";
 import { useDispatch } from "react-redux";
 import { setOpen, setAddress } from "../../actions";
+import Opensea from "../../assets/opensea.svg";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -46,36 +46,15 @@ const Navbar = () => {
         className="navbar-logo"
         onClick={refresh}
       />
-      <div className="navbar-links">
-        <Link
-          className="navbar-link"
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-        >
-          About
-        </Link>
-        <Link
-          className="navbar-link"
-          activeClass="active"
-          to="roadmap"
-          spy={true}
-          smooth={true}
-        >
-          Roadmap
-        </Link>
-        <Link
-          className="navbar-link"
-          activeClass="active"
-          to="faq"
-          spy={true}
-          smooth={true}
-        >
-          FAQ
-        </Link>
-      </div>
+
       <div className="navbar-buttons">
+        <a
+          href="https://twitter.com/Jungle_Genesis"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Opensea} alt="Opensea" className="navbar-button opensea" />
+        </a>
         <a
           href="https://twitter.com/Jungle_Genesis"
           target="_blank"

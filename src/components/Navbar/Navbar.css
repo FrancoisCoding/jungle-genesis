@@ -1,6 +1,6 @@
 .navbar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem;
   background-color: #2d3436;
@@ -41,6 +41,11 @@
   padding: 0 1rem;
   font-size: 4rem;
   color: white !important;
+}
+
+.opensea {
+  width: 4rem;
+  height: 4rem;
 }
 
 .connect {

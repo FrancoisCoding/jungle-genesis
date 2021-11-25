@@ -99,6 +99,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 4rem;
 }
 
 .mint-modal-content img {
@@ -113,10 +114,16 @@
 }
 
 .mint-btn {
-  padding: 0 1rem;
+  padding: 1rem 2rem !important;
   font-size: 2rem;
   color: white;
   border: 1px solid white;
+  margin-left: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 20rem;
+  text-align: center;
 }
 
 .mint-btn:hover {
