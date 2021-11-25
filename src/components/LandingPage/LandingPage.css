@@ -113,6 +113,11 @@
   padding: 1rem 0;
 }
 
+.mint-modal-content .disclaimer {
+  opacity: 0.7;
+  font-size: 1.25rem;
+}
+
 .mint-btn {
   padding: 1rem 2rem !important;
   font-size: 2rem;

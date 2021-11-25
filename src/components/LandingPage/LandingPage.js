@@ -24,6 +24,7 @@ const LandingPage = () => {
         <div className="mint-modal-content">
           <img src={Lion4} alt="Mint Preview" />
           <h1>0/125</h1>
+          <p className="disclaimer">*1 Mint Per Wallet</p>
           <p>{state.address}</p>
           <div className="mint-btn">MINT</div>
         </div>
