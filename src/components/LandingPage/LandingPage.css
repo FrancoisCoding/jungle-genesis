@@ -1,0 +1,124 @@
+.landing-container {
+  background-color: black;
+  color: white;
+}
+
+.landing-hero {
+  position: relative;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.landing-hero img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.landing-roadmap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.landing-about {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.landing-about h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+.landing-about p {
+  font-size: 1.4rem;
+}
+
+.landing-roadmap h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+.landing-phase {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-phase img {
+  width: 25%;
+}
+
+.landing-phase h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.landing-phase p {
+  font-size: 1.1rem;
+}
+
+.landing-faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.landing-faq h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+.landing-faq-title {
+  width: 30%;
+}
+
+.faq-row-wrapper {
+  width: 50%;
+}
+
+.landing-faq-title h1 {
+  font-size: 96px;
+  line-height: 97.89%;
+  text-transform: uppercase;
+  text-shadow: 14px 9px 5px rgba(0, 0, 0, 0.39);
+}
+
+.mint-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mint-modal-content img {
+  border-radius: 12px;
+  width: 20%;
+}
+
+.mint-modal-content h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+.mint-btn {
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid white;
+}
+
+.mint-btn:hover {
+  cursor: pointer;
+}

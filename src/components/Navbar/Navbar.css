@@ -1,0 +1,75 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  max-width: 5rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.navbar-logo:hover {
+  cursor: pointer;
+}
+
+.navbar-link {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: white;
+  transition: 0.2s ease-in-out all;
+}
+
+.navbar-link:hover {
+  cursor: pointer;
+}
+
+.navbar-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-button {
+  padding: 0 1rem;
+  font-size: 4rem;
+  color: white !important;
+}
+
+.connect {
+  padding: 1rem 2rem !important;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid white;
+  margin-left: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 20rem;
+  text-align: center;
+}
+
+.connect:hover {
+  cursor: pointer;
+}
+
+.mint-modal {
+  position: absolute; /* or absolute */
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mint-modal img {
+  width: 20%;
+}
