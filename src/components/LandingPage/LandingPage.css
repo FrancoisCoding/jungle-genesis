@@ -100,6 +100,7 @@
   justify-content: center;
   color: white;
   padding: 4rem;
+  height: 100vh;
 }
 
 .mint-modal-content img {
@@ -118,12 +119,12 @@
   font-size: 1.25rem;
 }
 
-.mint-btn {
+.mint-btn,
+.disabled-btn {
   padding: 1rem 2rem !important;
   font-size: 2rem;
   color: white;
   border: 1px solid white;
-  margin-left: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -133,4 +134,56 @@
 
 .mint-btn:hover {
   cursor: pointer;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1500px) {
+  .mint-modal-content img {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .mint-modal-content img {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .mint-modal-content img {
+    width: 60%;
+  }
+
+  .mint-modal-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .mint-modal-content .disclaimer {
+    font-size: 1rem;
+  }
+
+  .mint-btn,
+  .disabled-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mint-modal-content h1 {
+    font-size: 2rem;
+  }
+
+  .mint-btn,
+  .disabled-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 1.25rem;
+    width: 8rem;
+  }
 }

@@ -7,3 +7,7 @@ export const setOpen = () => (dispatch) => {
 export const setAddress = (address) => (dispatch) => {
   dispatch({ type: actionTypes.SET_ADDRESS, payload: address });
 };
+
+export const setCaptcha = () => (dispatch) => {
+  dispatch({ type: actionTypes.SET_CAPTCHA });
+};

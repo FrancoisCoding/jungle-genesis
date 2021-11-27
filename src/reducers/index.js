@@ -4,6 +4,7 @@ import * as actionTypes from "../actions/types";
 const initialState = {
   open: false,
   address: "",
+  solvedCaptcha: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,6 +19,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         address: action.payload,
+      };
+
+    case actionTypes.SET_CAPTCHA:
+      return {
+        ...state,
+        solvedCaptcha: true,
       };
 
     default:
