@@ -1,47 +1,47 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./LandingPage.css";
+import Footer from "../Footer/Footer";
 import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
-import { useSelector } from "react-redux";
+import Lion4 from "../../assets/lion4.png";
+import { useDispatch, useSelector } from "react-redux";
+import ReCAPTCHA from "react-google-recaptcha";
+import { setCaptcha } from "../../actions";
 
 const LandingPage = () => {
+  const dispatch = useDispatch();
   const state = useSelector((state) => state.user);
-  const [minted, setMinted] = useState(4);
 
   function getLibrary(provider) {
     return new Web3(provider);
   }
 
+  const onChange = () => {
+    dispatch(setCaptcha());
+  };
+
   console.log(state, "STATE");
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      <div className="landing-container">
-        <Navbar page="main" />
+      <div className="landing-container lo-res">
+        <Navbar />
 
-        <div className="landing-content">
-          <h1 className="landing-content-title">Centuries Collection</h1>
-          <h2 className="landing-content-subtitle">"The Five Families"</h2>
-          <h1 className="landing-content-counter">
-            <span>{minted}</span>/2000
-          </h1>
-          <div
-            className={
-              !state.address
-                ? "landing-content-mint disabled-btn"
-                : "landing-content-mint"
-            }
-            disabled={!state.address}
-          >
+        <div className="mint-modal-content">
+          <img src={Lion4} alt="Mint Preview" />
+          <h1>0/125</h1>
+          <p className="disclaimer">*1 Mint Per Wallet</p>
+          <p>{state.address}</p>
+          <ReCAPTCHA
+            sitekey="Y6LdbzGAdAAAAAMtV4ttpkCnj96i5sbupcLD175ph"
+            onChange={onChange}
+          />
+          <div className={state.solvedCaptcha ? "mint-btn" : "disabled-btn"}>
             MINT
           </div>
-          <p className="disclaimer">
-            Please Connect your Metamask and click 'Mint' to mint.
-          </p>
-          <p className="disclaimer">
-            After a transaction was signed there is no way to refund!
-          </p>
         </div>
+
+        <Footer />
       </div>
     </Web3ReactProvider>
   );
