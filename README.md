@@ -1,2 +1,2 @@
-Jungle Genesis
+# Jungle Genesis
 https://jungle-genesis.netlify.app/
